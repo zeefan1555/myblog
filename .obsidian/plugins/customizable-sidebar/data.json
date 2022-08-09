@@ -1,0 +1,12 @@
+{
+  "sidebarCommands": [],
+  "hiddenCommands": [
+    "打开/创建今天的日记",
+    "打开命令面板",
+    "管理工作区布局"
+  ],
+  "pinSidebar": {
+    "right": true,
+    "left": true
+  }
+}

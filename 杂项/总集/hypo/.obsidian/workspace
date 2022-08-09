@@ -1,0 +1,79 @@
+{
+  "main": {
+    "id": "a14ea6aa9806e1a7",
+    "type": "split",
+    "children": [
+      {
+        "id": "fd60aff664f3155d",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "程序员使用 Obsidian 的经验 --- 我的工作流_哔哩哔哩_bilibili.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "53ac1eab5a6f809b",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "4876473d65dd5db0",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "c0aca56d9bd944e6",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "0f344e93f4d7f6c2",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "3782cdb22e0004d7",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "程序员使用 Obsidian 的经验 --- 我的工作流_哔哩哔哩_bilibili.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "fd60aff664f3155d",
+  "lastOpenFiles": [
+    "程序员使用 Obsidian 的经验 --- 我的工作流_哔哩哔哩_bilibili.md"
+  ]
+}

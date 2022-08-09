@@ -1,0 +1,55 @@
+{
+  "choices": [
+    {
+      "id": "3e086885-4f20-4818-8f72-8b7bb5d3f780",
+      "name": "创建博客",
+      "type": "Template",
+      "command": false,
+      "templatePath": "myblog/templater/空白-templater.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "myblog/source/_posts"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false
+      },
+      "appendLink": false,
+      "incrementFileName": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default"
+    },
+    {
+      "id": "2b9cb2d6-3205-4ff7-92e8-31e9326c66a4",
+      "name": "生成deck",
+      "type": "Macro",
+      "command": false,
+      "macroId": "0fd42ead-dafb-4cbd-bac5-eff28a19673f"
+    },
+    {
+      "id": "28f6e352-3dfd-4c69-8b7d-950366ca1ca8",
+      "name": "1222",
+      "type": "Macro",
+      "command": false,
+      "macroId": null
+    }
+  ],
+  "macros": [
+    {
+      "name": "测试",
+      "id": "b6cc7910-f522-4739-8c5b-d91cb0439872",
+      "commands": [],
+      "runOnStartup": true
+    }
+  ],
+  "inputPrompt": "multi-line"
+}

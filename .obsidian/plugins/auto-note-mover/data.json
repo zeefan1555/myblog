@@ -1,0 +1,23 @@
+{
+  "trigger_auto_manual": "Manual",
+  "use_regex_to_check_for_tags": false,
+  "statusBar_trigger_indicator": true,
+  "folder_tag_pattern": [
+    {
+      "folder": "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/动态规划",
+      "tag": "#动态规划",
+      "pattern": ""
+    },
+    {
+      "folder": "",
+      "tag": "",
+      "pattern": ""
+    }
+  ],
+  "use_regex_to_check_for_excluded_folder": false,
+  "excluded_folder": [
+    {
+      "folder": ""
+    }
+  ]
+}

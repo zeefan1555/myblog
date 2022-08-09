@@ -1,0 +1,806 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexoblogzeefan.oss-cn-guangzhou.aliyuncs.com/img/202206251952371.png">
+  <link rel="icon" href="https://hexoblogzeefan.oss-cn-guangzhou.aliyuncs.com/img/202206251952371.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="zeefan">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="文章简介：如题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LaTex公式">
+<meta property="og:url" content="https://zeefan1555.github.io/posts/4371/index.html">
+<meta property="og:site_name" content="一杯空气">
+<meta property="og:description" content="文章简介：如题">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-08-02T02:06:00.000Z">
+<meta property="article:modified_time" content="2022-08-04T05:50:26.594Z">
+<meta property="article:author" content="zeefan">
+<meta property="article:tag" content="技能">
+<meta property="article:tag" content="已迁移">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>LaTex公式 - 一杯空气</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.15.6/katex.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zeefan1555.github.io","root":"/","version":"1.9.1","typing":{"enable":true,"typeSpeed":150,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"Text"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":10},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>一杯空气</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="LaTex公式"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-08-02 10:06" pubdate>
+          2022年8月2日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          21 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">LaTex公式</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2022年8月4日 下午
+                  
+                
+              </p>
+            
+            <div class="markdown-body">
+              
+              <p>文章简介：如题</p>
+<span id="more"></span>
+<p>​ <a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=LaTeX&amp;spm=1001.2101.3001.7020">LaTeX</a>是一种基于ΤΕΧ的排版系统，而TeX是由著名的计算机科学家<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%94%90%E7%BA%B3%E5%BE%B7%C2%B7%E5%85%8B%E5%8A%AA%E7%89%B9?fromtitle=Donald+E.+Knuth&amp;fromid=2509519">Donald E. Knuth</a>发明的排版系统,可以了解一下他，LaTeX能够优美地生成数学公式且质量极高，本文简要记录其常用公式，以备自查。</p>
+<h1 id="行内公式与行间公式及编号"><a class="markdownIt-Anchor" href="#行内公式与行间公式及编号"></a> 行内公式与行间公式及编号</h1>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span>f(x) = a+b<span class="hljs-built_in">$</span><br><br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br>f(x)=a+b+c<span class="hljs-keyword">\tag</span>{1.1}<br><span class="hljs-built_in">$</span><span class="hljs-built_in">$</span><br></code></pre></td></tr></tbody></table></figure>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">f(x) = a+b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(1.1)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">f(x)=a+b+c\tag{1.1}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span></span><span class="tag"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">1</span><span class="mord">.</span><span class="mord">1</span></span><span class="mord">)</span></span></span></span></span></span></p>
+<p>效果显然，使用<code>\tag{}</code> 对公式进行标号</p>
+<h1 id="多项式上下标-根号-分式-对数"><a class="markdownIt-Anchor" href="#多项式上下标-根号-分式-对数"></a> 多项式（上下标）、根号、分式、对数</h1>
+<p>上下标分别用 _{ }和 ^{ } 来标记，{}内为值，可以是公式等等</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span>f(x)=a<span class="hljs-built_in">_</span>{1}<span class="hljs-built_in">^</span>{1-x}+a<span class="hljs-built_in">^</span>{2-x}<span class="hljs-built_in">_</span>{2}+a<span class="hljs-built_in">^</span>{3-x}<span class="hljs-built_in">_</span>{3}<span class="hljs-built_in">$</span><br></code></pre></td></tr></tbody></table></figure>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msubsup><mi>a</mi><mn>1</mn><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></msubsup><mo>+</mo><msubsup><mi>a</mi><mn>2</mn><mrow><mn>2</mn><mo>−</mo><mi>x</mi></mrow></msubsup><mo>+</mo><msubsup><mi>a</mi><mn>3</mn><mrow><mn>3</mn><mo>−</mo><mi>x</mi></mrow></msubsup></mrow><annotation encoding="application/x-tex">f(x)=a_{1}^{1-x}+a^{2-x}_{2}+a^{3-x}_{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.120547em;vertical-align:-0.266308em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.854239em;"><span style="top:-2.433692em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span><span style="top:-3.1031310000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">−</span><span class="mord mathdefault mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.266308em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.120547em;vertical-align:-0.266308em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.854239em;"><span style="top:-2.433692em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.1031310000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mbin mtight">−</span><span class="mord mathdefault mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.266308em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.120547em;vertical-align:-0.266308em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.854239em;"><span style="top:-2.433692em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span><span style="top:-3.1031310000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mbin mtight">−</span><span class="mord mathdefault mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.266308em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p><strong>\sqrt{ }</strong> 表示平方根，<strong>\sqrt[n]{ }</strong> 表示n次方根，<strong>\frac{ }{ }</strong> 表示分式，两个{}先分子，后分母，对数用 <strong>\log_{2}{343}</strong> 表示</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span><span class="hljs-keyword">\sqrt</span>{x}+<span class="hljs-keyword">\sqrt</span>[3]{2-x}-<span class="hljs-keyword">\sqrt</span>[x]{<span class="hljs-keyword">\frac</span>{a<span class="hljs-built_in">^</span>x}{b<span class="hljs-built_in">^</span>x}}+<span class="hljs-keyword">\frac</span>{1}{x}+<span class="hljs-keyword">\log</span><span class="hljs-built_in">_</span>{2}{x}<span class="hljs-built_in">$</span><br></code></pre></td></tr></tbody></table></figure>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mi>x</mi></msqrt><mo>+</mo><mroot><mrow><mn>2</mn><mo>−</mo><mi>x</mi></mrow><mn>3</mn></mroot><mo>−</mo><mroot><mfrac><msup><mi>a</mi><mi>x</mi></msup><msup><mi>b</mi><mi>x</mi></msup></mfrac><mi>x</mi></mroot><mo>+</mo><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>+</mo><msub><mo><mi>log</mi><mo>⁡</mo></mo><mn>2</mn></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">\sqrt{x}+\sqrt[3]{2-x}-\sqrt[x]{\frac{a^x}{b^x}}+\frac{1}{x}+\log_{2}{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault">x</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.17444499999999996em;"></span><span class="mord sqrt"><span class="root"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.736886em;"><span style="top:-2.914666em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size1 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8655550000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">x</span></span></span><span style="top:-2.825555em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.17444499999999996em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.84em;vertical-align:-0.62276em;"></span><span class="mord sqrt"><span class="root"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.571968em;"><span style="top:-2.856688em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span></span></span></span></span></span></span></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.21724em;"><span class="svg-align" style="top:-3.8em;"><span class="pstrut" style="height:3.8em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.80948em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5935428571428571em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight">x</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5935428571428571em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight">x</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.17724em;"><span class="pstrut" style="height:3.8em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.8800000000000001em;"><svg width="400em" height="1.8800000000000001em" viewBox="0 0 400000 1944" preserveAspectRatio="xMinYMin slice"><path d="M1001,80H400000v40H1013.1s-83.4,268,-264.1,840c-180.7,
+572,-277,876.3,-289,913c-4.7,4.7,-12.7,7,-24,7s-12,0,-12,0c-1.3,-3.3,-3.7,-11.7,
+-7,-25c-35.3,-125.3,-106.7,-373.3,-214,-744c-10,12,-21,25,-33,39s-32,39,-32,39
+c-6,-5.3,-15,-14,-27,-26s25,-30,25,-30c26.7,-32.7,52,-63,76,-91s52,-60,52,-60
+s208,722,208,722c56,-175.3,126.3,-397.3,211,-666c84.7,-268.7,153.8,-488.2,207.5,
+-658.5c53.7,-170.3,84.5,-266.8,92.5,-289.5c4,-6.7,10,-10,18,-10z
+M1001 80H400000v40H1013z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.62276em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.93858em;vertical-align:-0.24414em;"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.20696799999999996em;"><span style="top:-2.4558600000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24414em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span></span></span></span></span></p>
+<h3 id="常用符号"><a class="markdownIt-Anchor" href="#常用符号"></a> 常用符号</h3>
+<p><strong>+ - * /</strong> 等可以直接打出</p>
+<p>乘号用\times,点乘用\cdot，除号用\div，不等号用\ne，恒等或同余号用\equiv，整除用\mid,取模用\mod，上取整用\lfloor x \rfloor，下取整用\lceil x \rceil</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\\</span>  <span class="hljs-keyword">\times</span>乘号 <span class="hljs-keyword">\cdot</span>点乘  <span class="hljs-keyword">\div</span>除号  <span class="hljs-keyword">\ne</span>不等号	<span class="hljs-keyword">\equiv</span>恒等或同余号 <br><span class="hljs-keyword">\\</span>  <span class="hljs-keyword">\mid</span>	整除 <span class="hljs-keyword">\mod</span> 取模   <span class="hljs-keyword">\lfloor</span> x <span class="hljs-keyword">\rfloor</span> 和 <span class="hljs-keyword">\lceil</span> x <span class="hljs-keyword">\rceil</span><br></code></pre></td></tr></tbody></table></figure>
+<p>\times乘号 \cdot点乘  \div除号  \ne不等号	\equiv恒等或同余号<br>
+\mid	整除 \mod 取模   \lfloor x \rfloor 和 \lceil x \rceil</p>
+<p><strong>ps</strong>: \ \ 是分行</p>
+<p>小于号用\lt，大于号用\gt，小于等于号用\le，大于等于号用\ge</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\lt</span>小于号     <span class="hljs-keyword">\gt</span>大于号    <span class="hljs-keyword">\le</span>小于等于号    <span class="hljs-keyword">\ge</span>大于等于号<br></code></pre></td></tr></tbody></table></figure>
+<p>&lt; 小 于 号 &gt; 大 于 号 ≤ 小 于 等 于 号 ≥ 大 于 等 于 号 \lt小于号 \gt大于号 \le小于等于号 \ge大于等于号 &lt;小于号&gt;大于号≤小于等于号≥大于等于号</p>
+<p>集合运算符号</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\\</span> <span class="hljs-keyword">\cup</span>并运算 <span class="hljs-keyword">\quad</span>  <span class="hljs-keyword">\cap</span>交运算 <span class="hljs-keyword">\qquad</span>  <span class="hljs-keyword">\subset</span> 和 <span class="hljs-keyword">\supset</span>  <br><span class="hljs-keyword">\\</span> <span class="hljs-keyword">\subseteq</span> 和 <span class="hljs-keyword">\supseteq</span> <span class="hljs-keyword">\qquad</span>  <span class="hljs-keyword">\in</span> 和 <span class="hljs-keyword">\notin</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\emptyset</span> 空集<br></code></pre></td></tr></tbody></table></figure>
+<p>∪ 并 运 算 ∩ 交 运 算 ⊂ 和 ⊃ ⊆ 和 ⊇ ∈ 和 ∉ ∅ 空 集 \ \cup并运算 \quad \cap交运算 \qquad \subset 和 \supset \ \subseteq 和 \supseteq \qquad \in 和 \notin \qquad \emptyset 空集 ∪并运算∩交运算⊂和⊃⊆和⊇∈和∈/​∅空集</p>
+<p><strong>ps</strong>: \qquad是空格</p>
+<p>三角符号用\bigtriangleup，三角符号类似\sin,度数用上标^{\cric}表示，角用\angle</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\\</span> <span class="hljs-keyword">\bigtriangleup</span>三角 <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\angle</span> 角<br><span class="hljs-keyword">\\</span> <span class="hljs-keyword">\tan</span>90<span class="hljs-built_in">^</span>{<span class="hljs-keyword">\circ</span>}和<span class="hljs-keyword">\sin</span> x和<span class="hljs-keyword">\cos</span> x三角函数及度数表示 <br></code></pre></td></tr></tbody></table></figure>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\\</span>	<span class="hljs-keyword">\rightarrow</span>和<span class="hljs-keyword">\Rightarrow</span><br><span class="hljs-keyword">\\</span>  <span class="hljs-keyword">\leftrightarrow</span>和<span class="hljs-keyword">\Leftrightarrow</span><br><span class="hljs-keyword">\\</span>	<span class="hljs-keyword">\vee</span>和<span class="hljs-keyword">\wedge</span><br><span class="hljs-keyword">\\</span>	<span class="hljs-keyword">\because</span>和<span class="hljs-keyword">\therefore</span><br><span class="hljs-keyword">\\</span>	因为所以<br></code></pre></td></tr></tbody></table></figure>
+<p>→ 和 ⇒ ↔ 和 ⇔ ∨ 和 ∧ ∵ 和 ∴ 因 为 所 以 \ \rightarrow和\Rightarrow \ \leftrightarrow和\Leftrightarrow \ \vee和\wedge \ \because和\therefore \ 因为所以 →和⇒↔和⇔∨和∧∵和∴因为所以</p>
+<p>特殊符号</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\\</span> <span class="hljs-keyword">\otimes</span>和<span class="hljs-keyword">\oplus</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\nearrow</span>和<span class="hljs-keyword">\searrow</span> <span class="hljs-keyword">\qquad</span>	<br><span class="hljs-keyword">\\</span> <span class="hljs-keyword">\sim</span>和<span class="hljs-keyword">\approx</span>  <span class="hljs-keyword">\qquad</span>	<span class="hljs-keyword">\ldots</span>和<span class="hljs-keyword">\cdots</span> 不同对齐的省略号<br></code></pre></td></tr></tbody></table></figure>
+<p>⊗ 和 ⊕ ↗ 和 ↘ ∼ 和 ≈ … 和 ⋯ 不 同 对 齐 的 省 略 号 \ \otimes和\oplus \qquad \nearrow和\searrow \qquad \ \sim和\approx \qquad \ldots和\cdots 不同对齐的省略号 ⊗和⊕↗和↘∼和≈…和⋯不同对齐的省略号</p>
+<h3 id="积分-极限-求和-乘积-求导"><a class="markdownIt-Anchor" href="#积分-极限-求和-乘积-求导"></a> 积分、极限、求和、乘积、求导</h3>
+<p>\int表示积分，\lim表示极限， \sum表示求和，\prod表示乘积，<em>’</em> 表示求导，微分中的dx用\mathrm{d}x表示，\to表示箭头，\infty表示无穷</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\\</span> <span class="hljs-keyword">\int</span><span class="hljs-built_in">_</span>{0}<span class="hljs-built_in">^</span>{x}{x<span class="hljs-built_in">^</span>2}<span class="hljs-keyword">\mathrm</span>{d}x +<span class="hljs-keyword">\lim</span><span class="hljs-built_in">_</span>{x <span class="hljs-keyword">\to</span> <span class="hljs-keyword">\infty</span>}{<span class="hljs-keyword">\frac</span>{<span class="hljs-keyword">\sin</span> x}{x}}<br><span class="hljs-keyword">\\</span>  <span class="hljs-keyword">\sum</span><span class="hljs-built_in">_</span>{i=1}<span class="hljs-built_in">^</span>{n}{a<span class="hljs-built_in">_</span>ib<span class="hljs-built_in">_</span>i}+<span class="hljs-keyword">\prod</span><span class="hljs-built_in">_</span>{i=1}<span class="hljs-built_in">^</span>{n}{(a<span class="hljs-built_in">_</span>i+b<span class="hljs-built_in">_</span>i)}+f(x)''<br></code></pre></td></tr></tbody></table></figure>
+<p>∫ 0 x x 2 d x + lim ⁡ x → ∞ sin ⁡ x x ∑ i = 1 n a i b i + ∏ i = 1 n ( a i + b i ) + f ( x ) ′ ′ \ \int_{0}<sup>{x}{x</sup>2}\mathrm{d}x +\lim_{x \to \infty}{\frac{\sin x}{x}} \ \sum_{i=1}<sup>{n}{a_ib_i}+\prod_{i=1}</sup>{n}{(a_i+b_i)}+f(x)’’ ∫0x​x2dx+x→∞lim​xsinx​i=1∑n​ai​bi​+i=1∏n​(ai​+bi​)+f(x)′′</p>
+<h3 id="向量-组合数-矩阵"><a class="markdownIt-Anchor" href="#向量-组合数-矩阵"></a> 向量、组合数、矩阵</h3>
+<p>向量用 <strong>\overrightarrow{ }</strong> 表示，组合数用 <strong>\binom{ }{ }</strong> ，其类似于分式</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\overrightarrow</span>{AB} <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\binom</span>{1}{2}<br></code></pre></td></tr></tbody></table></figure>
+<p>A B → ( 1 2 ) \overrightarrow{AB} \qquad \binom{1}{2} AB</p>
+<p>(21​)</p>
+<p>矩阵以起始来规定，内部以&amp;分列，以\分行，括号里可填matrix，bmatrix，pmatrix，vmatrix，分别对应示例(1)(2)(3)(4)</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span> <span class="hljs-keyword">\begin</span>{matrix}<br>0 <span class="hljs-built_in">&amp;</span> 1 <span class="hljs-keyword">\\</span><br>1 <span class="hljs-built_in">&amp;</span> 0 <br><span class="hljs-keyword">\end</span>{matrix} <span class="hljs-built_in">$</span>   <br></code></pre></td></tr></tbody></table></figure>
+<p>0 1 1 0</p>
+<p>01​10​ [ 0 1 1 0 ]</p>
+<p>[01​10​] ( 0 1 1 0 )</p>
+<p>(01​10​) ∣ 0 1 1 0 ∣</p>
+<p>∣∣∣∣​01​10​∣∣∣∣​</p>
+<p>( 1 ) ( 2 ) ( 3 ) ( 4 ) (1)\qquad(2)\qquad(3)\qquad(4) (1)(2)(3)(4)</p>
+<h3 id="方框加粗-上下标记-空格-更大更小的字符"><a class="markdownIt-Anchor" href="#方框加粗-上下标记-空格-更大更小的字符"></a> 方框加粗、上下标记、空格、更大更小的字符</h3>
+<p>\boxed命令给公式加一个方框，\mathbf将字体加粗，\overline, \underline 分别在表达式上、下方画出水平线，\quad和\qquad是空格，\large 或 \small能使字符变大变小</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\\</span> <span class="hljs-keyword">\boxed</span>{<span class="hljs-keyword">\large</span>{<span class="hljs-keyword">\mathbf</span>{E=mc<span class="hljs-built_in">^</span>2}}}<br><span class="hljs-keyword">\\</span> <span class="hljs-keyword">\overline</span>{a+<span class="hljs-keyword">\underline</span>{b+<span class="hljs-keyword">\small</span>{N}}}<br></code></pre></td></tr></tbody></table></figure>
+<p>E = m c 2 a + b + N ‾ ‾ \ \boxed{\large{\mathbf{E=mc^2}}} \ \overline{a+\underline{b+\small{N}}} E=mc2​a+b+N​​</p>
+<h3 id="希腊字母"><a class="markdownIt-Anchor" href="#希腊字母"></a> 希腊字母</h3>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\\</span> <span class="hljs-keyword">\alpha</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\beta</span>  <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\Delta</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\zeta</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\varepsilon</span> <br><span class="hljs-keyword">\\</span> <span class="hljs-keyword">\eta</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\theta</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\lambda</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\mu</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\xi</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\pi</span>  <br><span class="hljs-keyword">\\</span> <span class="hljs-keyword">\rho</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\sigma</span>  <span class="hljs-keyword">\qquad</span>  <span class="hljs-keyword">\upsilon</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\Phi</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\phi</span> <br><span class="hljs-keyword">\\</span> <span class="hljs-keyword">\Psi</span>  <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\psi</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\omega</span> <span class="hljs-keyword">\qquad</span> <span class="hljs-keyword">\Omega</span> <span class="hljs-keyword">\qquad</span> O<br></code></pre></td></tr></tbody></table></figure>
+<p>α β Δ ζ ε η θ λ μ ξ π ρ σ υ Φ ϕ Ψ ψ ω Ω O \ \alpha \qquad \beta \qquad \Delta \qquad \zeta \qquad \varepsilon \ \eta \qquad \theta \qquad \lambda \qquad \mu \qquad \xi \qquad \pi \ \rho \qquad \sigma \qquad \upsilon \qquad \Phi \qquad \phi \ \Psi \qquad \psi \qquad \omega \qquad \Omega \qquad O αβΔζεηθλμξπρσυΦϕΨψωΩO</p>
+<h2 id="结论"><a class="markdownIt-Anchor" href="#结论"></a> 结论</h2>
+<p>​ LaTeX是非常有用的，是非常严谨优美的， 在此对<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%94%90%E7%BA%B3%E5%BE%B7%C2%B7%E5%85%8B%E5%8A%AA%E7%89%B9?fromtitle=Donald+E.+Knuth&amp;fromid=2509519">Donald E. Knuth</a>表示敬意。</p>
+<h2 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h2>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42755533/article/details/113132619?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522165940495016781683972226%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=165940495016781683972226&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-113132619-null-null.142%5Ev37%5Epc_search_v2&amp;utm_term=latex%20%E5%85%AC%E5%BC%8F&amp;spm=1018.2226.3001.4187">LaTeX常用公式_ywlcode的博客-CSDN博客_latex 整除</a></p>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%F0%9F%9A%80%E6%8A%80%E8%83%BD/" class="category-chain-item">🚀技能</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%8A%80%E8%83%BD/">#技能</a>
+      
+        <a href="/tags/%E5%B7%B2%E8%BF%81%E7%A7%BB/">#已迁移</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>LaTex公式</div>
+      <div>https://zeefan1555.github.io/posts/4371/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>zeefan</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年8月2日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年8月4日</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/1424/" title="LaTex 环境配置">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">LaTex 环境配置</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/57305/" title="《C++零基础99题》">
+                        <span class="hidden-mobile">《C++零基础99题》</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

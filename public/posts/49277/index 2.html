@@ -1,0 +1,1042 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://hexoblogzeefan.oss-cn-guangzhou.aliyuncs.com/img/202206251952371.png">
+  <link rel="icon" href="https://hexoblogzeefan.oss-cn-guangzhou.aliyuncs.com/img/202206251952371.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="zeefan">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="notion多条件formula - CSDN  1 一、属性（列名-properties）   prop(“属性”) 返回每个条目的“属性值”，点击即可用对应的格式插入到公式中。   公式中的四种方式 四 种 格 式 { 数 字 日 期 字 符 串 复 选 框 四种格式\begin{cases} 数字 &amp; \ 日期 &amp; \字符串 &amp;\复选框 &amp; \end{case">
+<meta property="og:type" content="article">
+<meta property="og:title" content="notion函数详解">
+<meta property="og:url" content="https://zeefan1555.github.io/posts/49277/index.html">
+<meta property="og:site_name" content="一杯空气">
+<meta property="og:description" content="notion多条件formula - CSDN  1 一、属性（列名-properties）   prop(“属性”) 返回每个条目的“属性值”，点击即可用对应的格式插入到公式中。   公式中的四种方式 四 种 格 式 { 数 字 日 期 字 符 串 复 选 框 四种格式\begin{cases} 数字 &amp; \ 日期 &amp; \字符串 &amp;\复选框 &amp; \end{case">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-06-23T12:53:00.000Z">
+<meta property="article:modified_time" content="2022-07-12T09:02:14.270Z">
+<meta property="article:author" content="zeefan">
+<meta property="article:tag" content="notion">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>notion函数详解 - 一杯空气</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.15.6/katex.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zeefan1555.github.io","root":"/","version":"1.9.1","typing":{"enable":true,"typeSpeed":150,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"Text"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":10},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>一杯空气</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://hexoblogzeefan.oss-cn-guangzhou.aliyuncs.com/img/202206200917436.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="notion函数详解"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-06-23 20:53" pubdate>
+          2022年6月23日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          37 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">notion函数详解</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2022年7月12日 下午
+                  
+                
+              </p>
+            
+            <div class="markdown-body">
+              
+              <p><a target="_blank" rel="noopener" href="https://www.csdn.net/tags/NtzaggysMDE2OTctYmxvZwO0O0OO0O0O.html">notion多条件formula - CSDN</a></p>
+<h1 id="1-一-属性列名-properties"><a class="markdownIt-Anchor" href="#1-一-属性列名-properties"></a> 1 一、属性（列名-properties）</h1>
+<ol>
+<li>
+<p>prop(“属性”) 返回每个条目的“属性值”，点击即可用对应的格式插入到公式中。</p>
+</li>
+<li>
+<p>公式中的四种方式</p>
+<p>四 种 格 式 { 数 字 日 期 字 符 串 复 选 框 四种格式\begin{cases} 数字 &amp; \ 日期 &amp; \字符串 &amp;\复选框 &amp; \end{cases} 四种格式⎩⎪⎪⎪⎨⎪⎪⎪⎧​数字日期字符串复选框​​</p>
+</li>
+</ol>
+<p>floor((prop(“小时”) + prop(“分钟”) / 60) * 100) / 100</p>
+<h1 id="2-二-常量constants"><a class="markdownIt-Anchor" href="#2-二-常量constants"></a> 2 二、常量（constants）</h1>
+<p>常 量 { e 自 然 对 数 的 底 数 p i 圆 周 率 t r u e 真 f l a s e 假 常量\begin{cases} e &amp;自然对数的底数 \ pi &amp;圆周率 \true &amp;真\flase &amp;假 \end{cases} 常量⎩⎪⎪⎪⎨⎪⎪⎪⎧​epitrueflase​自然对数的底数圆周率真假​</p>
+<h1 id="3-三-基本运算"><a class="markdownIt-Anchor" href="#3-三-基本运算"></a> 3 三、基本运算</h1>
+<ol>
+<li>
+<p>if语法（“<code>if</code>”）：进行条件判断，在两个选项（要为同一格式）中选择一个。</p>
+<p>语法：</p>
+<ul>
+<li><code>boolean?value:value</code></li>
+<li><code>if(boolean,value,value)</code></li>
+</ul>
+<p>补充：在"boolean"不能填写0或者1；value中，true（真）为1，false（假）为0；</p>
+</li>
+<li>
+<p>加法（"<code>+</code>“或"<code>add</code>"）：把两个数字或字符串相加，并返回它们的值</p>
+<p>语法：</p>
+<ul>
+<li><code>value+value</code></li>
+<li><code>add(value,value)</code></li>
+</ul>
+<p>说明：value可以是数字或字符串，为字符串时要加上双引号</p>
+</li>
+<li>
+<p>减法（”<code>-</code>“或“<code>subtract</code>”）：将两个数字相减，并返回它们的值</p>
+<p>语法：</p>
+<ul>
+<li><code>number-number</code></li>
+<li><code>subtract(number,number)</code></li>
+</ul>
+</li>
+<li>
+<p>乘法（”<code>*</code>“或“<code>multiply</code>”）：将两个数字相乘，并返回它们的值</p>
+<p>语法：</p>
+<ul>
+<li><code>number*number</code></li>
+<li><code>multiply(number,number)</code></li>
+</ul>
+</li>
+<li>
+<p>除法（”<code>/</code> “或"<code>divide</code>"）：将两个数字相乘，并返回他们的值</p>
+<p>语法：</p>
+<ul>
+<li><code>number/number</code></li>
+<li><code>divide(number,number)</code></li>
+</ul>
+</li>
+<li>
+<p>绝对值（"<code>abs</code>"）：返回数的绝对值</p>
+<p>语法：<code>abs(number)</code></p>
+</li>
+<li>
+<p>求余运算（”<code>%</code>“或"<code>mod</code>"）：把两个数进行求余运算，并返回它们的值</p>
+<p>语法：</p>
+<ul>
+<li><code>number%number</code></li>
+<li><code>mod(number,number)</code></li>
+</ul>
+</li>
+<li>
+<p>”四舍五入“（”<code>round</code>“）：对数字进行”四舍五入“</p>
+<p>语法：<code>round(number)</code></p>
+<p>说明：默认情况下只保留整数。要保留n位小数时，应使用</p>
+<p>r o u n d ( n u m b e r ∗ 1 0 n ) / 1 0 n round(number*10<sup>n)/10</sup>n round(number∗10n)/10n</p>
+</li>
+<li>
+<p>一元负数（”<code>unaryminus</code>“或“<code>-</code>”）：对一个数进行取它的负数</p>
+<p>语法：</p>
+<p><code>-number</code></p>
+<p><code>unaryminus(number)</code></p>
+<p>如：-3==unaryminus(3)</p>
+</li>
+<li>
+<p>一元加号（“<code>+</code>”或“<code>unaryPlus</code>”）：将参数转化为数字。</p>
+</li>
+</ol>
+<pre><code class="hljs">语法：
+
+`+value`
+
+`unaryPlus(value)`
+
+补充：可以将true转化为1，false转化为0
+</code></pre>
+<h1 id="4-四-关系逻辑判断"><a class="markdownIt-Anchor" href="#4-四-关系逻辑判断"></a> 4 四、关系逻辑判断</h1>
+<ol>
+<li>关系判断
+<ul>
+<li>大于 &gt;</li>
+<li>小于 &lt;</li>
+<li>等于 ==</li>
+<li>大于等于 &gt;=</li>
+<li>小于等于 &lt;=</li>
+<li>不等于 !=</li>
+</ul>
+</li>
+<li>逻辑判断
+<ul>
+<li>
+<p>逻辑“<code>非</code>”：对逻辑参数进行否定</p>
+<p>语法：</p>
+<p><code>not boolean</code></p>
+<p><code>not (boolean)</code></p>
+</li>
+<li>
+<p>逻辑“<code>与</code>”：对逻辑参数进行“与”运算，<code>“一假全假”</code></p>
+<p>语法：</p>
+<p><code>boolean and boolean</code></p>
+<p><code>and(boolean,boolean)</code></p>
+</li>
+<li>
+<p>逻辑“或”：对逻辑参数进行“或”运算，<code>“一真全真”</code></p>
+<p>语法：</p>
+<p><code>boolean or boolean</code></p>
+<p><code>or(boolean,boolean)</code></p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="5-五-字符串函数"><a class="markdownIt-Anchor" href="#5-五-字符串函数"></a> 5 五、字符串函数</h1>
+<ol>
+<li>
+<p>连接函数（“<code>concat</code>”）：将字符串进行连接</p>
+<p>语法：</p>
+<p><code>concat(text...)</code></p>
+<p><code>text+text+...</code></p>
+</li>
+<li>
+<p>插符函数（“<code>join</code>”）：插入字符函数，在其余叁数之间插入第一个参数并返回它们的连接字符串</p>
+<p>语法：<code>join(text...)</code></p>
+<p>例如：join("-",“a”,“b”,“c”)==“a-b-c”</p>
+</li>
+<li>
+<p>切片函数（”<code>slice</code>“）：从字符串中提取子字符串（包括开头索引，不包括结尾索引[start,end)）</p>
+<p>语法：</p>
+<ul>
+<li><code>slice(text,number)</code></li>
+<li><code>slice(text,number1,number2)</code></li>
+</ul>
+<p>说明:只有一个数字时，就是从这个索引数字开始到结束；当有两个数字时（第二个数要大于第一个数，不然不会显示），从字符串中提取子字符串，包含开头索引，不包含结束索引。</p>
+<p>注意：字符串的索引值是从0开始的</p>
+</li>
+<li>
+<p>长度函数（”<code>length</code>“）：返回字符串的长度，返回值是一个数值。</p>
+<p>语法：<code>length(text)</code></p>
+</li>
+<li>
+<p>转化函数（”<code>format</code>“）：将其他格式的参数转化为字符串。</p>
+<p>语法：<code>format(value)</code></p>
+</li>
+<li>
+<p>转化函数（”<code>toNumber</code>“）：将其他格式的参数转化数字</p>
+<p>语法：<code>toNumber(value)</code></p>
+<p>说明：</p>
+<ul>
+<li>可以把字符串类型转化为数字，如："123"到数字123</li>
+<li>可以把日期类型转化时间戳，Jan 18, 2021 7:28 PM→1610969340000</li>
+<li>可以把复选框类型转化为数字，true为1，false为0</li>
+<li>也可以把数字类型转化为数字</li>
+</ul>
+</li>
+<li>
+<p>包含判断函数（”<code>contains</code>“）：包含判断函数，返回一个boolean值，</p>
+<p>语法：<code>contains(text1,text2)</code></p>
+<p>说明：如果text1中包含text2，则返回true；反之，返回false</p>
+</li>
+<li>
+<p>替代函数：</p>
+<ul>
+<li>
+<p>“<code>replace</code>”：用新值替换正则表达式的第一个匹配项</p>
+<p>语法：<code>replace(number/text/boolean,text1,text2)</code></p>
+<p>说明：text表示字符串类型，text1表示要代替的值，text2表示新的值</p>
+</li>
+<li>
+<p>"<code>replaceAll</code>”：用新值代替正则表达式的所有匹配项</p>
+<p>语法：<code>replaceAll(number/text/boolean,text1,text2)</code></p>
+<p>说明：text表示字符串类型，text1表示要代替的值，text2表示新的值</p>
+</li>
+</ul>
+</li>
+<li>
+<p>检验函数（“<code>test</code>”）：判断一个字符串是否与正则表达式匹配，返回一个boolean值</p>
+<p>语法：<code>test(number/text/boolean,text)</code></p>
+</li>
+<li>
+<p>“验空”函数（”<code>empty</code>“）：判断一个值是否为空</p>
+</li>
+</ol>
+<pre><code class="hljs">语法：`empty(number/text/boolean/date)`
+
+说明：默认情况下，数字为0表示空，字符串以""表示空值，boolean值以false表示空值
+</code></pre>
+<h1 id="6-六-数学函数"><a class="markdownIt-Anchor" href="#6-六-数学函数"></a> 6 六、数学函数</h1>
+<ol>
+<li>
+<p>绝对值函数（“<code>abs</code>”)：返回一个数的绝对值</p>
+<p>语法：<code>abs(number)</code></p>
+</li>
+<li>
+<p>开算术平方根运算（”<code>sqrt</code>“）：返回一个数的算术平方根</p>
+<p>语法：<code>sqrt(number)</code></p>
+<p>说明：number要为非负数</p>
+</li>
+<li>
+<p>开立方根（”<code>cbrt</code>“)：返回一个数的立方根</p>
+<p>语法：<code>cbrt(number)</code></p>
+</li>
+<li>
+<p>幂次运算（”<code>^</code>“或"<code>pow</code>"）：将两个数字进行指数运算，并返回它们的值</p>
+<p>语法：</p>
+<ul>
+<li><code>number^number</code></li>
+<li><code>pow(number,number)</code></li>
+</ul>
+<p>补充:</p>
+<p>自然指数运算（”<code>exp</code>“）：返回e^x的值，其中x为参数，e为常数</p>
+<p>语法：<code>exp(number)</code></p>
+</li>
+<li>
+<p>对数运算：notion目前只支持三种对数运算</p>
+<p>三 种 对 数 运 算 { l n ( n u m b e r ) 返 回 一 个 数 的 自 然 对 数 l o g 10 ( n u m b e r ) 返 回 这 个 数 以 10 为 底 对 数 的 值 l o g 2 ( n u m b e r ) 返 回 这 个 数 以 2 为 底 对 数 的 值 三种对数运算\begin{cases}ln(number) &amp;返回一个数的自然对数\log_{10}(number)&amp;返回这个数以10为底对数的值\log_2(number) &amp;返回这个数以2为底对数的值\end{cases} 三种对数运算⎩⎪⎨⎪⎧​ln(number)log10​(number)log2​(number)​返回一个数的自然对数返回这个数以10为底对数的值返回这个数以2为底对数的值​</p>
+</li>
+<li>
+<p>向上取整函数（“<code>ceil</code>”）：返回大于或等于这个数字的最小整数</p>
+<p>语法：<code>ceil(number)</code></p>
+</li>
+<li>
+<p>向下取整函数（“<code>floor</code>”）：返回小于或等于这个数字的最大整数</p>
+<p>语法：<code>floor(number)</code></p>
+</li>
+<li>
+<p>最大/小值函数</p>
+<ul>
+<li>
+<p>最大值函数（“<code>max</code>”）：返回数的最大值</p>
+<p>语法：<code>max(number1,number2,...)</code></p>
+</li>
+<li>
+<p>最小值函数（“<code>min</code>”）：返回数的最小值</p>
+<p>语法：<code>min(number1,number2,...)</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>符号函数（“<code>sign</code>”）：返回数的符号，指明数的符号是为正、负或零</p>
+<p>语法：<code>sign(number)</code></p>
+<p>说明：数字为正时，返回1；数字为负时，返回-1；数字为0时，返回0</p>
+</li>
+</ol>
+<h1 id="7-七-日期函数"><a class="markdownIt-Anchor" href="#7-七-日期函数"></a> 7 七、日期函数</h1>
+<ol>
+<li>
+<p>返回时间差函数（<code>dateBetween</code>）：返回两个日期之间的时间差，返回值是一个数字。</p>
+<p>语法：<code>dateBetween(date,date,text)</code></p>
+<p>说明：<code>date</code>表示日期；<code>text</code>表示”时间差“的基本单位，类型为字符串，取值有：年、季度、月、周、天、小时、分钟、秒、或毫秒。</p>
+<p>t e x t 的 取 值 类 型 { " y e a r s " 表 示 以 “ 年 ” 为 基 本 单 位 " q u a r t e r s " 表 示 以 “ 季 ” 为 基 本 单 位 " m o n t h s " 表 示 以 “ 月 " 为 基 本 单 位 " w e e k s " 表 示 以 “ 周 ” 为 基 本 单 位 " d a y s " 表 示 以 “ 天 ” 为 基 本 单 位 " h o u r s " 表 示 以 “ 小 时 ” 为 基 本 单 位 " m i n u t e s " 表 示 以 “ 分 钟 ” 为 基 本 单 位 " s e c o n d s " 表 示 以 “ 秒 ” 为 基 本 单 位 " m i l l i s e c o n d " 表 示 以 “ 毫 秒 ” 为 基 本 单 位 text的取值类型\begin{cases}“years” &amp; 表示以“年”为基本单位\“quarters”&amp;表示以“季”为基本单位\“months” &amp;表示以“月"为基本单位\“weeks”&amp; 表示以“周”为基本单位\“days”&amp;表示以“天”为基本单位\“hours”&amp;表示以“小时”为基本单位\“minutes”&amp;表示以“分钟”为基本单位\“seconds”&amp;表示以“秒”为基本单位\“millisecond”&amp;表示以“毫秒”为基本单位\end{cases} text的取值类型⎩⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎨⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎧​"years"“quarters”“months”“weeks”“days”“hours”“minutes”“seconds”"millisecond"​表示以“年”为基本单位表示以“季”为基本单位表示以“月"为基本单位表示以“周”为基本单位表示以“天”为基本单位表示以“小时”为基本单位表示以“分钟”为基本单位表示以“秒”为基本单位表示以“毫秒”为基本单位​</p>
+</li>
+<li>
+<p>获取当前日期函数（<code>now</code>):返回当前的日期和时间</p>
+<p>语法：<code>now()</code></p>
+</li>
+<li>
+<p>日期范围开始函数（“<code>start</code>”）：返回一个日期范围的开始</p>
+<p>语法：<code>start(date)</code></p>
+</li>
+<li>
+<p>日期范围结束函数（“<code>end</code>”）：返回一个日期范围的结束</p>
+<p>语法：<code>end(date)</code></p>
+</li>
+<li>
+<p>日期到时间戳函数（“<code>timestamp</code>”）：返回来自Unix毫秒时间戳的整数，对应于自1970年1月1日起的毫秒数，返回值是<code>数值</code></p>
+<p>语法：<code>timestamp(date)</code></p>
+<p>说明：把日期格式的<code>日期转化</code>为数值类型的<code>时间戳</code></p>
+</li>
+<li>
+<p>时间戳到日期函数（“<code>fromTimestamp</code>”）：返回由Unix毫秒时间戳构建的日期，对应于自1970年1月1日起的毫秒数，返回值是<code>日期</code></p>
+<p>语法：<code>fromTimestamp(number)</code></p>
+<p>说明：把数值类型的<code>时间戳转化为日期</code>类型的日期</p>
+</li>
+<li>
+<p>增加日期判据（argument）函数（“<code>dateAdd</code>”）：增加到日期，最后一个是单位判据</p>
+<p>语法：<code>dateAdd(date,number,text)</code></p>
+<p>说明：<code>date</code>表示日期；number表示日期差；<code>text</code>表示”时间差“的基本单位，类型为字符串，取值有：年、季度、月、周、天、小时、分钟、秒、或毫秒。</p>
+<p>t e x t 的 取 值 类 型 { " y e a r s " 表 示 以 “ 年 ” 为 基 本 单 位 " q u a r t e r s " 表 示 以 “ 季 ” 为 基 本 单 位 " m o n t h s " 表 示 以 “ 月 " 为 基 本 单 位 " w e e k s " 表 示 以 “ 周 ” 为 基 本 单 位 " d a y s " 表 示 以 “ 天 ” 为 基 本 单 位 " h o u r s " 表 示 以 “ 小 时 ” 为 基 本 单 位 " m i n u t e s " 表 示 以 “ 分 钟 ” 为 基 本 单 位 " s e c o n d s " 表 示 以 “ 秒 ” 为 基 本 单 位 " m i l l i s e c o n d " 表 示 以 “ 毫 秒 ” 为 基 本 单 位 text的取值类型\begin{cases}“years” &amp; 表示以“年”为基本单位\“quarters”&amp;表示以“季”为基本单位\“months” &amp;表示以“月"为基本单位\“weeks”&amp; 表示以“周”为基本单位\“days”&amp;表示以“天”为基本单位\“hours”&amp;表示以“小时”为基本单位\“minutes”&amp;表示以“分钟”为基本单位\“seconds”&amp;表示以“秒”为基本单位\“millisecond”&amp;表示以“毫秒”为基本单位\end{cases} text的取值类型⎩⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎨⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎧​"years"“quarters”“months”“weeks”“days”“hours”“minutes”“seconds”"millisecond"​表示以“年”为基本单位表示以“季”为基本单位表示以“月"为基本单位表示以“周”为基本单位表示以“天”为基本单位表示以“小时”为基本单位表示以“分钟”为基本单位表示以“秒”为基本单位表示以“毫秒”为基本单位​</p>
+</li>
+<li>
+<p>减少日期的日期函数（<code>“dateSubtract</code>”）：减少日期的日期，最后一个是判据</p>
+<p>语法：<code>dateSubtract(date,number,text)</code></p>
+<p>说明：类似上面的dateAdd函数。</p>
+</li>
+<li>
+<p>设置日期格式函数（“<code>formatDate</code>”）：使用“时刻”标准时间格式字符串，设置日期格式，返回的是一个<code>字符串</code></p>
+<p>语法：<code>formatDate(date,text)</code></p>
+<p>例子：</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cpp">formatDate(<span class="hljs-built_in">now</span>(), <span class="hljs-string">"MMMM D YYYY, HH:mm"</span>) == March <span class="hljs-number">30</span> <span class="hljs-number">2010</span>, <span class="hljs-number">12</span>:<span class="hljs-number">00</span><br>formatDate(<span class="hljs-built_in">now</span>(), <span class="hljs-string">"YYYY/MM/DD, HH:mm"</span>) == <span class="hljs-number">2010</span>/<span class="hljs-number">03</span>/<span class="hljs-number">30</span>, <span class="hljs-number">12</span>:<span class="hljs-number">00</span><br>formatDate(<span class="hljs-built_in">now</span>(), <span class="hljs-string">"MM/DD/YYYY, HH:mm"</span>) == <span class="hljs-number">03</span>/<span class="hljs-number">30</span>/<span class="hljs-number">2010</span>, <span class="hljs-number">12</span>:<span class="hljs-number">00</span><br>formatDate(<span class="hljs-built_in">now</span>(), <span class="hljs-string">"HH:mm A"</span>) == <span class="hljs-number">12</span>:<span class="hljs-number">00</span> PM<br>formatDate(<span class="hljs-built_in">now</span>(), <span class="hljs-string">"M/D/YY"</span>) == <span class="hljs-number">3</span>/<span class="hljs-number">30</span>/<span class="hljs-number">10</span><br></code></pre></td></tr></tbody></table></figure>
+</li>
+<li>
+<p>返回”给定日期“所用单位函数下的数字<br>
+所 用 的 单 位 函 数 { 分 钟 函 数 （ m i n u t e ） { 返 回 一 个 0 到 59 之 间 的 整 数 ， 对 应 于 给 定 日 期 的 分 钟 数 语 法 ： m i n u t e ( d a t e ) 小 时 函 数 （ h o u r ） { 返 回 一 个 0 到 23 之 间 的 整 数 ， 对 应 于 给 定 日 期 的 小 时 数 语 法 ： h o u r ( d a t e ) 星 期 函 数 （ d a y ） { 返 回 一 个 0 到 6 之 间 的 整 数 ， 对 应 于 给 定 的 日 期 。 0 代 表 星 期 日 ， 1 代 表 星 期 一 等 等 语 法 ： d a y ( d a t e ) 日 期 函 数 （ d a t e ） { 返 回 一 个 1 到 31 之 间 的 整 数 , 对 应 于 给 定 日 期 语 法 ： d a t e ( d a t e ) 月 函 数 （ m o n t h ） { 返 回 一 个 0 到 11 之 间 的 整 数 ， 0 对 应 于 1 月 ， 1 对 应 于 2 月 等 等 语 法 ： m o n t h ( d a t e ) 年 份 函 数 （ y e a r ） { 返 回 给 定 日 期 的 年 份 语 法 ： y e a r ( d a t e ) 所用的单位函数\begin{cases} 分钟函数（minute）\begin{cases}返回一个0到59之间的整数，对应于给定日期的分钟数\语法：minute(date)\end{cases}\ 小时函数（hour）\begin{cases}返回一个0到23之间的整数，对应于给定日期的小时数\语法：hour(date)\end{cases}\ 星期函数（day）\begin{cases}返回一个0到6之间的整数，对应于给定的日期。0代表星期日，1代表星期一等等\语法：day(date)\end{cases}\ 日期函数（date）\begin{cases}返回一个1到31之间的整数,对应于给定日期\语法：date(date)\end{cases}\ 月函数（month）\begin{cases}返回一个0到11之间的整数，0对应于1月，1对应于2月等等\语法：month(date)\end{cases}\ 年份函数（year）\begin{cases}返回给定日期的年份\语法：year(date)\\end{cases} \end{cases} 所用的单位函数⎩⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎨⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎪⎧​分钟函数（minute）{返回一个0到59之间的整数，对应于给定日期的分钟数语法：minute(date)​小时函数（hour）{返回一个0到23之间的整数，对应于给定日期的小时数语法：hour(date)​星期函数（day）{返回一个0到6之间的整数，对应于给定的日期。0代表星期日，1代表星期一等等语法：day(date)​日期函数（date）{返回一个1到31之间的整数,对应于给定日期语法：date(date)​月函数（month）{返回一个0到11之间的整数，0对应于1月，1对应于2月等等语法：month(date)​年份函数（year）{返回给定日期的年份语法：year(date)</p>
+</li>
+</ol>
+<h1 id="8-参考资料"><a class="markdownIt-Anchor" href="#8-参考资料"></a> 8 参考资料</h1>
+<p>自用跳转连接：<a href="">ob</a>， <a href="">blog</a></p>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%F0%9F%9A%80%E6%8A%80%E8%83%BD/" class="category-chain-item">🚀技能</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%F0%9F%9A%80%E6%8A%80%E8%83%BD/notion/" class="category-chain-item">notion</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/notion/">#notion</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>notion函数详解</div>
+      <div>https://zeefan1555.github.io/posts/49277/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>zeefan</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年6月23日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年7月12日</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/64386/" title="现代制造工程">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">现代制造工程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/42381/" title="obsidian media 插件">
+                        <span class="hidden-mobile">obsidian media 插件</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,81 @@
+{
+  "main": {
+    "id": "1b9003a82ab6cc1a",
+    "type": "split",
+    "children": [
+      {
+        "id": "a322569f22871fe6",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "83f138e2acdb9d6b",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "372451b4aabb35f9",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "a4599968cba8bd55",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "7325562944bc4e5e",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "0c9c08d2cd9b0eed",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "a322569f22871fe6",
+  "lastOpenFiles": [
+    "总笔记/tasks.md",
+    "总笔记/面试简历.md",
+    "零散笔记/创建线程.md",
+    "总笔记/第三章总笔记.md",
+    "总笔记/第二章总笔记.md",
+    "总笔记/signal 信号捕捉函数.md",
+    "零散笔记/sigprocmask.md",
+    "总笔记/第二章笔记.md"
+  ]
+}

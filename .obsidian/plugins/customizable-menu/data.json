@@ -1,0 +1,12 @@
+{
+  "menuCommands": [
+    {
+      "id": "workspace:copy-path",
+      "name": "复制当前文件的路径",
+      "icon": "duplicate-glyph"
+    }
+  ],
+  "hideTitles": [
+    "打开命令面板"
+  ]
+}

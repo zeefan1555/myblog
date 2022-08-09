@@ -1,0 +1,26 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 92
+  },
+  "promptDelete": false,
+  "newFileLocation": "folder",
+  "attachmentFolderPath": "杂项/附件",
+  "communityPluginSortOrder": "download",
+  "alwaysUpdateLinks": true,
+  "newFileFolderPath": "杂项/零散笔记",
+  "trashOption": "local",
+  "communityThemeSortOrder": "download",
+  "readableLineLength": false,
+  "lineWrap": true,
+  "showLineNumber": true,
+  "strictLineBreaks": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "fileSortOrder": "byModifiedTime",
+  "vimMode": true
+}

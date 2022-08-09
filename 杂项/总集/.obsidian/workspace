@@ -1,0 +1,83 @@
+{
+  "main": {
+    "id": "ec0de31c469aefff",
+    "type": "split",
+    "children": [
+      {
+        "id": "346ddbc81ce5b679",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b138b2765c33a6ba",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "bf4024eb05d462e3",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "13bb93e45ef888e2",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "9c3e31dc55d72f86",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "6fb4eef5ed13ed66",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "346ddbc81ce5b679",
+  "lastOpenFiles": [
+    "零散笔记/notion笔记.md",
+    "学校/Week13 Preparing for Academic Presentations.md",
+    "学校/0. 英语口语作业汇总版.md",
+    "2. 项目webserver/网站配置/网站.md",
+    "零散笔记/滑动窗口.md",
+    "零散笔记/TCP四次挥手.md",
+    "2. 项目webserver/总笔记/4. 第四章 linux 网络编程.md",
+    "Excalidraw/TCP三次握手 时序图excalidraw.md",
+    "零散笔记/TCP三次握手.md",
+    "科研/OME 论文阅读总结--张菲帆.md"
+  ]
+}

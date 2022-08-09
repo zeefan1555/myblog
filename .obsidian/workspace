@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "1088a953ada3149b",
+    "type": "split",
+    "children": [
+      {
+        "id": "00eab0d4db2523ef",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "杂项/零散笔记/git github 的使用.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a06e6f4260560b67",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b71d048eecf206c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b2bd52fb85d17dcf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b98c64a400665f74",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#card",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ddfe3c29534e8b6a",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "d0f0fea64155c2f0",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "bc9dc8bbdf2d62f3",
+            "type": "leaf",
+            "state": {
+              "type": "file-tree-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 252,
+    "collapsed": true
+  },
+  "right": {
+    "id": "da5366ade0b85987",
+    "type": "split",
+    "children": [
+      {
+        "id": "f3736436ec2c930a",
+        "type": "tabs",
+        "dimension": 45.62256809338522,
+        "children": [
+          {
+            "id": "b8d75425a92c93be",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "84c89973e4a35415",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "杂项/零散笔记/git github 的使用.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6df5b9204d763274",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "杂项/零散笔记/git github 的使用.md"
+              }
+            }
+          },
+          {
+            "id": "89c611bc93adf3db",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "杂项/零散笔记/git github 的使用.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "562e8f95abe35f90",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "fbb072af524a7537",
+        "type": "tabs",
+        "dimension": 54.37743190661478,
+        "children": [
+          {
+            "id": "a2e3cda0cda9cfa6",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "杂项/零散笔记/git github 的使用.md",
+                "options": {
+                  "collapse-filter": false,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": true,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": false,
+                  "colorGroups": [],
+                  "collapse-display": false,
+                  "showArrow": true,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": false,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 2.4237138578819173,
+                  "close": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 252,
+    "collapsed": true
+  },
+  "active": "00eab0d4db2523ef",
+  "lastOpenFiles": [
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/动态规划/测试.md",
+    "杂项/零散笔记/简历.md",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/动态规划/1.动态规划理论基础.md",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/动态规划/16.目标和(装满背包有多少种方法).md",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/双指针法/双指针法总述.md",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/1.算法性能分析/空间复杂度分析.md",
+    "source/_posts/👨🏻‍💻code/C++/C++ primer plus/for 循环.md",
+    "source/_posts/👨🏻‍💻code/C++/C++ primer plus/C++ new的用法.md",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/1.算法性能分析/代码内存消耗.md",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/动态规划/18.完全背包理论基础.md"
+  ]
+}

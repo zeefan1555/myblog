@@ -1,0 +1,16 @@
+{
+  "githubRepo": "digitalgarden",
+  "githubToken": "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",
+  "githubUserName": "zeefan1555",
+  "gardenBaseUrl": "obsidian155.netlify.cpp",
+  "prHistory": [
+    "https://github.com/zeefan1555/obsidian/pull/1"
+  ],
+  "theme": "{\"name\":\"Catppuccin\",\"author\":\"Marshall Beckrich\",\"repo\":\"mbeckrich/obsidian\",\"screenshot\":\"assets/screenshot.png\",\"modes\":[\"dark\"],\"branch\":\"main\",\"cssUrl\":\"https://raw.githubusercontent.com/mbeckrich/obsidian/main/obsidian.css\"}",
+  "baseTheme": "light",
+  "faviconPath": "",
+  "defaultNoteSettings": {
+    "dgHomeLink": true,
+    "dgPassFrontmatter": false
+  }
+}

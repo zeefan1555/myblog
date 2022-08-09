@@ -1,0 +1,179 @@
+{
+  "excalibrainFilepath": "excalibrain.md",
+  "hierarchy": {
+    "exclusions": [
+      "excalidraw-border-color",
+      "excalidraw-css",
+      "excalidraw-default-mode",
+      "excalidraw-export-dark",
+      "excalidraw-export-pngscale",
+      "excalidraw-export-svgpadding",
+      "excalidraw-export-transparent",
+      "excalidraw-font",
+      "excalidraw-font-color",
+      "excalidraw-link-brackets",
+      "excalidraw-link-prefix",
+      "excalidraw-linkbutton-opacity",
+      "excalidraw-onload-script",
+      "excalidraw-plugin",
+      "excalidraw-url-prefix",
+      "kanban-plugin"
+    ],
+    "parents": [
+      "Parent",
+      "Parents",
+      "u",
+      "up"
+    ],
+    "children": [
+      "Child",
+      "Children",
+      "d",
+      "down"
+    ],
+    "friends": [
+      "Friend",
+      "Friends",
+      "j",
+      "Jump",
+      "Jumps"
+    ]
+  },
+  "inferAllLinksAsFriends": false,
+  "renderAlias": false,
+  "nodeTitleScript": "",
+  "backgroundColor": "#0c3e6aff",
+  "excludeFilepaths": [],
+  "showInferredNodes": true,
+  "showAttachments": true,
+  "showVirtualNodes": true,
+  "showFolderNodes": false,
+  "showTagNodes": false,
+  "showPageNodes": true,
+  "showNeighborCount": true,
+  "showFullTagName": false,
+  "maxItemCount": 30,
+  "renderSiblings": false,
+  "baseNodeStyle": {
+    "prefix": "",
+    "backgroundColor": "#00000066",
+    "fillStyle": "solid",
+    "textColor": "#ffffffff",
+    "borderColor": "#00000000",
+    "fontSize": 20,
+    "fontFamily": 3,
+    "maxLabelLength": 30,
+    "roughness": 0,
+    "strokeShaprness": "round",
+    "strokeWidth": 1,
+    "strokeStyle": "solid",
+    "padding": 10,
+    "gateRadius": 5,
+    "gateOffset": 15,
+    "gateStrokeColor": "#ffffffff",
+    "gateBackgroundColor": "#ffffffff",
+    "gateFillStyle": "solid"
+  },
+  "centralNodeStyle": {
+    "fontSize": 30,
+    "backgroundColor": "#C49A13FF",
+    "textColor": "#000000ff"
+  },
+  "inferredNodeStyle": {
+    "backgroundColor": "#000005b3",
+    "textColor": "#95c7f3ff"
+  },
+  "virtualNodeStyle": {
+    "backgroundColor": "#ff000066",
+    "fillStyle": "hachure",
+    "textColor": "#ffffffff"
+  },
+  "siblingNodeStyle": {
+    "fontSize": 15
+  },
+  "attachmentNodeStyle": {
+    "prefix": "📎 "
+  },
+  "folderNodeStyle": {
+    "prefix": "📂 ",
+    "strokeShaprness": "sharp",
+    "borderColor": "#ffd700ff",
+    "textColor": "#ffd700ff"
+  },
+  "tagNodeStyle": {
+    "prefix": "#",
+    "strokeShaprness": "sharp",
+    "borderColor": "#4682b4ff",
+    "textColor": "#4682b4ff"
+  },
+  "tagNodeStyles": {},
+  "tagStyleList": [],
+  "baseLinkStyle": {
+    "strokeColor": "#696969FF",
+    "strokeWidth": 1,
+    "strokeStyle": "solid",
+    "roughness": 0,
+    "startArrowHead": "none",
+    "endArrowHead": "none",
+    "showLabel": true,
+    "fontSize": 10,
+    "fontFamily": 3,
+    "textColor": "#ffffffff"
+  },
+  "inferredLinkStyle": {
+    "strokeStyle": "dashed"
+  },
+  "folderLinkStyle": {
+    "strokeColor": "#ffd700ff"
+  },
+  "tagLinkStyle": {
+    "strokeColor": "#4682b4ff"
+  },
+  "hierarchyLinkStyles": {
+    "Parent": {},
+    "Parents": {},
+    "u": {},
+    "up": {},
+    "Child": {},
+    "Children": {},
+    "d": {},
+    "down": {},
+    "Friend": {},
+    "Friends": {},
+    "j": {},
+    "Jump": {},
+    "Jumps": {}
+  },
+  "navigationHistory": [
+    "source/_posts/🚀技能/obsidian/obsidian templater 插件.md",
+    "杂项/零散笔记/讲一讲01背包初始化的逻辑。.md",
+    "杂项/附件/Excalidraw/ExcaliBrain Snapshot - 递归算法的复杂度.excalidraw.md",
+    "tag:待解决",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/动态规划/19.零钱兑换II 2.md",
+    "folder:source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/动态规划",
+    "杂项/附件/Excalidraw/ExcaliBrain Snapshot - 动态规划.excalidraw.md",
+    "folder:public/categories/👨🏻‍💻code/数据结构与算法/代码随想录/动态规划",
+    "杂项/附件/Excalidraw/ExcaliBrain Snapshot - 时间复杂度分析.excalidraw.md",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/动态规划/1.动态规划理论基础.md",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/1.算法性能分析/空间复杂度分析.md",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/1.算法性能分析/时间复杂度分析.md",
+    "source/_posts/👨🏻‍💻code/C++/C++ primer plus/C++ new的用法.md",
+    "folder:source/_posts/👨🏻‍💻code/C++/C++ primer plus",
+    "source/_posts/👨🏻‍💻code/C++/C++ primer plus/c++中 - ‘0’ 以及 -'a' 的相减操作解释.md",
+    "测试孩子文件",
+    "测试孩子文件.md",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/1.算法性能分析/递归算法的复杂度.md",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/动态规划/12.0-1背包理论基础（二）.md",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/1.算法性能分析/测试2.md",
+    "source/_posts/👨🏻‍💻code/数据结构与算法/代码随想录/1.算法性能分析/测试.md",
+    "themes/fluid/source/img/BAB手势 2022-06-09 17.21.49.excalidraw.md",
+    "source/_posts/🚀技能/BAB.md"
+  ],
+  "allowOntologySuggester": true,
+  "ontologySuggesterParentTrigger": "::p",
+  "ontologySuggesterChildTrigger": "::c",
+  "ontologySuggesterFriendTrigger": "::f",
+  "ontologySuggesterTrigger": ":::",
+  "ontologySuggesterMidSentenceTrigger": "(",
+  "boldFields": false
+}

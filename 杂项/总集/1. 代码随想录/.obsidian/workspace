@@ -1,0 +1,84 @@
+{
+  "main": {
+    "id": "9c16a22b3f60a840",
+    "type": "split",
+    "children": [
+      {
+        "id": "767fc62170900d04",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "回溯算法/2.组合问题.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e4af23418284189d",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "8f86c5477c6f1a1e",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "077cefa0b3714fda",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "c21dee93d613f10e",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "6bc130d720ca720c",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "回溯算法/2.组合问题.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "767fc62170900d04",
+  "lastOpenFiles": [
+    "回溯算法/2.组合问题.md",
+    "回溯算法/0. 回溯算法集合.md",
+    "3.组合优化.md",
+    "4.组合总和III.md",
+    "回溯算法/代码随想录.回溯算法.md",
+    "回溯算法/1.回溯算法理论基础.md"
+  ]
+}
